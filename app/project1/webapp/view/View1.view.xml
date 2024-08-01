@@ -1,0 +1,46 @@
+<mvc:View controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+        <Table
+                id="employeeTable"
+                inset="true"
+                width="auto"
+                items="{/Employees}">
+                <columns>
+                    <Column>
+                        <header>
+                            <Label text="ID" />
+                        </header>
+                    </Column>
+                    <Column>
+                        <header>
+                            <Label text="Name" />
+                        </header>
+                    </Column>
+                    <Column>
+                        <header>
+                            <Label text="Email" />
+                        </header>
+                    </Column>
+                    <Column>
+                        <header>
+                            <Label text="Job Title" />
+                        </header>
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem type="Navigation" press="onItemPress">
+                        <cells>
+                            <Text text="{ID}" />
+                            <Text text="{name}" />
+                            <Text text="{email}" />
+                            <Text text="{jobTitle}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+    </content>
+    </Page>
+</mvc:View>
